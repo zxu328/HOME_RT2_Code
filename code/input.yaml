@@ -1,0 +1,33 @@
+# input file directory
+dataDir: './'
+# output file directory
+outDir: './'
+# load data name (this is an example of anomaly (fire) happens periodically)
+fileName: "exampleData.csv"
+# model file name for save/load
+modelName: './model.pt' 
+# data size for model calibration
+calibrationSize: 300 
+# hyperparameters
+# LSTM encoder input size
+inputSize: 10 
+# variational hidden layer dimensionality
+hiddenSize: 1 
+# deep LSTM encoder depth
+numLayerEn: 1 
+# deep LSTM decoder depth
+numLayerDe: 1 
+# normalization for reconstruction: suggested 0
+predNorm: 0 
+# input normalization: suggested 1 for LSTM encoder
+isNorm: 1 
+# training epoch number
+epochs: 500 
+# reconstruction latency: suggested 0
+predLatent: 0 
+# anomaly score threshold: 90% 1.65^2; 95% 1.96^2; 99% 2.58^2
+threshold: 2.72  
+# relaod model? 
+isReload: False 
+# save model?
+isSave: False 
